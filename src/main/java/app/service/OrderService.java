@@ -1,9 +1,12 @@
 package app.service;
 
 import app.dto.OrderCreatedEvent;
+import app.dto.OrderResponse;
 import app.entity.OrderEntity;
 import app.entity.OrderItem;
 import app.repo.OrderRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -27,6 +30,12 @@ public class OrderService {
         entity.setTotal(getTotal(event));
 
         orderRepository.save(entity);
+    }
+
+    public Page<OrderResponse> findAll(Long customerId, PageRequest pageRequest) {
+
+        var orders =  orderRepository.findAllByCustomerId(customerId, pageRequest);
+        return orders.map(OrderResponse::fromEntity);
     }
 
     private BigDecimal getTotal(OrderCreatedEvent event) {
