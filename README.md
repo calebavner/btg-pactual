@@ -9,7 +9,7 @@
 
 </p>
 
-Resolução do desafio Pontos de Interesse por GPS do repositorio Backend Brasil, [neste link](https://github.com/buildrun-tech/buildrun-desafio-backend-btg-pactual/blob/main/problem.md).
+Resolução do desafio backend BTG Pactual, [neste link](https://github.com/buildrun-tech/buildrun-desafio-backend-btg-pactual/blob/main/problem.md).
 
 
 ## :rocket: Tecnologias utilizadas
