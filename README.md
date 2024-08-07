@@ -18,6 +18,7 @@ Resolução do desafio backend BTG Pactual, [neste link](https://github.com/buil
 * Spring Boot
 * RabbitMQ
 * MongoDB
+* Docker
   
 :mag: Clone o projeto e teste na prática.
 
