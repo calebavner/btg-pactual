@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.doReturn;
 
@@ -44,7 +45,7 @@ class OrderControllerTest {
 
             doReturn(OrderResponseFactory.builWithOneItem())
                     .when(orderService)
-                    .findAll(anyLong(), ArgumentMatchers.any());
+                    .findAll(anyLong(), any());
 
             doReturn(BigDecimal.valueOf(20.50))
                     .when(orderService).findTotalOnOrdersByCustomerId(anyLong());
@@ -88,7 +89,7 @@ class OrderControllerTest {
 
             doReturn(pagination)
                     .when(orderService)
-                    .findAll(anyLong(), ArgumentMatchers.any());
+                    .findAll(anyLong(), any());
 
             doReturn(BigDecimal.valueOf(20.50))
                     .when(orderService).findTotalOnOrdersByCustomerId(anyLong());
